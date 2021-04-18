@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+.container{
+    padding:20px;
+    height:100vh;
+}
+
+.container-grid{
+    width:100%;
+    max-width:1200px;
+    height:600px;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin:auto;
+}
+
+
+/* THE SECTION OF THE GRID LEFT */
+.grid-left{
+    position:relative;
+}
+
+.header{
+    margin-top:10px;
+}
+
+
+.main{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+.main p{
+    font-family:Heebo;
+    color:#535c66;
+}
+
+
+
+
+/* THE SECTION OF THE GRID RIGHT */
+
+.grid-right{
+    position:relative;
+}
+
+.grid-input{
+    width:100%;
+    max-width:400px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    padding:20px;
+}
+
+.grid-input h2{
+    font-family:Heebo;
+    margin-bottom:5px;
+}
+
+.grid-input p{
+    font-family:Heebo;
+    margin-bottom:30px;
+}
+
+.form-input label{
+    font-family:Heebo;
+    font-weight:bold;
+}
+
+
+.form-input input{
+    padding:13px;
+    width:100%;
+    margin-bottom:20px;
+    border:none;
+    outline:none;
+    margin-top:6px;
+    border-radius:5px;
+    background:#e1fdef;
+}
+
+.grid-input button{
+    padding:13px;
+    color:#fff;
+    width:100%;
+    background:#154F5A;
+    border:none;
+    outline:none;
+    border-radius:3px;
+    font-weight:bold;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+
+/* ================================================== */
+@media screen and (max-width:768px){
+
+.container{
+    padding:20px;
+    height:100%;
+}
+
+.container-grid{
+    max-width:600px;
+    height:800px;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+
+/* THE SECTION OF THE GRID LEFT */
+
+.header img{
+    width:130px;
+}
+
+.main{
+    text-align:center;
+    width:70%;
+}
+
+.main p{
+    font-size:15px;
+    text-align:center;
+}
+
+.main img{
+    width:180px;
+}
+
+
+/* THE SECTION OF THE GRID RIGHT */
+
+.grid-right{
+    position:relative;
+}
+
+.grid-input{
+    padding:20px;
+}
+
+.grid-input h2{
+    text-align:center;
+}
+
+.grid-input p{
+    font-size:15px;
+    text-align:center;
+}
+
+.form-input label{
+    font-size:16px;
+}
+
+}
+
+
+/* ================================================== */
+@media screen and (max-width:425px){
+
+
+/* THE SECTION OF THE GRID LEFT */
+
+.main img{
+    width:150px;
+}
+
+
+/* THE SECTION OF THE GRID RIGHT */
+.grid-input{
+    top:40%;
+}
+
+}
