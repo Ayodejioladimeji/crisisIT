@@ -177,7 +177,44 @@ booksRef
   });
 }
 
+function loginState(){
+  var user = firebase.auth().currentUser;
+
+if (user) {
+  // User is signed in.
+  window.location = "dashboard.html";
+} else {
+  // No user is signed in.
+}
+}
+
+function loginState(){
+  var user = firebase.auth().currentUser;
+
+if (user) {
+  // User is signed in.
+  // window.location = "dashboard.html";
+} else {
+  // No user is signed in.
+  // window.location = "index.html";
+
+}
+}
+
+var logoutBtn = document.getElementById("logout-btn");
+logoutBtn.addEventListener('click', e => {
+  e.preventDefault();
+  firebase.auth().signOut();
+  console.log('User signed out!');
+  window.location = "index.html";
+
+})
+
 window.onload = function() {
   fetchCurrentCrisisData();
   fetchCurrentUserData();
+  setTimeout(()=>{
+  loginState();
+
+  }, 1);
 };
