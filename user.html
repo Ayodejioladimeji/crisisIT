@@ -8,6 +8,29 @@
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
   <link rel="stylesheet" href="./css/user.css" />
   <title>CrisitIT</title>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+  
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+  
+  <!-- <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyA7nxs8uTXRsIJFQL0BfMr0gRxX0C_QLyo",
+      authDomain: "crisisit-645c6.firebaseapp.com",
+      projectId: "crisisit-645c6",
+      storageBucket: "crisisit-645c6.appspot.com",
+      messagingSenderId: "628069220231",
+      appId: "1:628069220231:web:6aa5b13bff76a7e6599d22",
+      measurementId: "G-SJ2TXDFR41"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script> -->
 </head>
 
 <body id="body">
@@ -46,43 +69,14 @@
                 <td>Last Post</td>
               </tr>
             </thead>
-            <tbody>
+            <tbody  id="appendToTable">
               <tr>
                 <td>Femi Adebayo</td>
                 <td>Femi@gmail.com</td>
                 <td>3</td>
                 <td>10 Oct, 18</td>
               </tr>
-              <tr>
-                <td>Femi Adebayo</td>
-                <td>Femi@gmail.com</td>
-                <td>3</td>
-                <td>10 Oct, 18</td>
-              </tr>
-              <tr>
-                <td>Femi Adebayo</td>
-                <td>Femi@gmail.com</td>
-                <td>3</td>
-                <td>10 Oct, 18</td>
-              </tr>
-              <tr>
-                <td>Femi Adebayo</td>
-                <td>Femi@gmail.com</td>
-                <td>3</td>
-                <td>10 Oct, 18</td>
-              </tr>
-              <tr>
-                <td>Femi Adebayo</td>
-                <td>Femi@gmail.com</td>
-                <td>3</td>
-                <td>10 Oct, 18</td>
-              </tr>
-              <tr>
-                <td>Femi Adebayo</td>
-                <td>Femi@gmail.com</td>
-                <td>3</td>
-                <td>10 Oct, 18</td>
-              </tr>
+              
             </tbody>
           </table>
         </div>
@@ -114,9 +108,12 @@
 
       </div>
     </div>
+        <button id="loginId" hidden>Log In</button>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <script src="script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
 </body>
 
 </html>

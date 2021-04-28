@@ -8,6 +8,29 @@
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
   <link rel="stylesheet" href="./css/styles.css" />
   <title>CrisitIT</title>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+  
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+  
+  <!-- <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyA7nxs8uTXRsIJFQL0BfMr0gRxX0C_QLyo",
+      authDomain: "crisisit-645c6.firebaseapp.com",
+      projectId: "crisisit-645c6",
+      storageBucket: "crisisit-645c6.appspot.com",
+      messagingSenderId: "628069220231",
+      appId: "1:628069220231:web:6aa5b13bff76a7e6599d22",
+      measurementId: "G-SJ2TXDFR41"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script> -->
 </head>
 
 <body id="body">
@@ -36,9 +59,9 @@
     <!-- THE SECTION OF THE MAIN -->
     <main>
       <div class="main__container">
-        <div class="main__cards">
+        <div class="main__cards" id="appendIdTo">
           
-          <div class="card">
+          <!-- <div class="card">
             <div class="card-image">
               <img src="./assets/Image.svg" alt="Sample photo">
 
@@ -69,171 +92,12 @@
               <span>12:30 PM,</span>
               <span>20TH JUN, 2020</span>
             </div>
-          </div>
+          </div> -->
+     
 
-          <div class="card">
-            <div class="card-image">
-              <img src="./assets/Image.svg" alt="Sample photo">
+        
 
-              <div class="card-main">
-                <img src="./assets/Vector.png" alt="samples">
-              </div>
-
-              <div class="card-footer">
-                <div class="circle"></div>
-                <h3>Fire Incident</h3>
-              </div>
-            </div>
-
-            <div class="text">
-              <div class="texting">
-                <p>Power Cable Issue</p>
-                <div class="popping" onclick="myFunction()">
-                  <i class="fa fa-ellipsis-v"></i>
-                  <span class="delete" id="pop">
-                    delete
-                  </span>
-                </div>
-              </div>
-
-              <h3>Adebayo Michael</h3>
-              <p>Our planet's hot, gooey center may be the result of a collision between a young Earth and a mercury.
-              </p>
-              <span>12:30 PM,</span>
-              <span>20TH JUN, 2020</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-image">
-              <img src="./assets/Image.svg" alt="Sample photo">
-
-              <div class="card-main">
-                <img src="./assets/Vector.png" alt="samples">
-              </div>
-
-              <div class="card-footer">
-                <div class="circle"></div>
-                <h3>Fire Incident</h3>
-              </div>
-            </div>
-
-            <div class="text">
-              <div class="texting">
-                <p>Power Cable Issue</p>
-                <div class="popping" onclick="myFunction()">
-                  <i class="fa fa-ellipsis-v"></i>
-                  <span class="delete" id="pop">
-                    delete
-                  </span>
-                </div>
-              </div>
-
-              <h3>Adebayo Michael</h3>
-              <p>Our planet's hot, gooey center may be the result of a collision between a young Earth and a mercury.
-              </p>
-              <span>12:30 PM,</span>
-              <span>20TH JUN, 2020</span>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-image">
-              <img src="./assets/Image.svg" alt="Sample photo">
-
-              <div class="card-main">
-                <img src="./assets/Vector.png" alt="samples">
-              </div>
-
-              <div class="card-footer">
-                <div class="circle"></div>
-                <h3>Fire Incident</h3>
-              </div>
-            </div>
-
-            <div class="text">
-              <div class="texting">
-                <p>Power Cable Issue</p>
-                <div class="popping" onclick="myFunction()">
-                  <i class="fa fa-ellipsis-v"></i>
-                  <span class="delete" id="pop">
-                    delete
-                  </span>
-                </div>
-              </div>
-
-              <h3>Adebayo Michael</h3>
-              <p>Our planet's hot, gooey center may be the result of a collision between a young Earth and a mercury.
-              </p>
-              <span>12:30 PM,</span>
-              <span>20TH JUN, 2020</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-image">
-              <img src="./assets/Image.svg" alt="Sample photo">
-
-              <div class="card-main">
-                <img src="./assets/Vector.png" alt="samples">
-              </div>
-
-              <div class="card-footer">
-                <div class="circle"></div>
-                <h3>Fire Incident</h3>
-              </div>
-            </div>
-
-            <div class="text">
-              <div class="texting">
-                <p>Power Cable Issue</p>
-                <div class="popping" onclick="myFunction()">
-                  <i class="fa fa-ellipsis-v"></i>
-                  <span class="delete" id="pop">
-                    delete
-                  </span>
-                </div>
-              </div>
-
-              <h3>Adebayo Michael</h3>
-              <p>Our planet's hot, gooey center may be the result of a collision between a young Earth and a mercury.
-              </p>
-              <span>12:30 PM,</span>
-              <span>20TH JUN, 2020</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="card-image">
-              <img src="./assets/Image.svg" alt="Sample photo">
-
-              <div class="card-main">
-                <img src="./assets/Vector.png" alt="samples">
-              </div>
-
-              <div class="card-footer">
-                <div class="circle"></div>
-                <h3>Fire Incident</h3>
-              </div>
-            </div>
-
-            <div class="text">
-              <div class="texting">
-                <p>Power Cable Issue</p>
-                <div class="popping" onclick="myFunction()">
-                  <i class="fa fa-ellipsis-v"></i>
-                  <span class="delete" id="pop">
-                    delete
-                  </span>
-                </div>
-              </div>
-
-              <h3>Adebayo Michael</h3>
-              <p>Our planet's hot, gooey center may be the result of a collision between a young Earth and a mercury.
-              </p>
-              <span>12:30 PM,</span>
-              <span>20TH JUN, 2020</span>
-            </div>
-          </div>
+      
 
         </div>
         <!-- MAIN CARDS ENDS HERE -->
@@ -266,8 +130,12 @@
       </div>
     </div>
   </div>
+    <button id="loginId" hidden>Log In</button>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <script src="script.js"></script>
+  <!-- <script src="script.js"></script> -->
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
 </body>
 
 </html>
