@@ -97,7 +97,8 @@ booksRef
     // [ { id: 'glMeZvPpTN1Ah31sKcnj', title: 'The Great Gatsby' } ]
 
     data.forEach(element => {
-      
+      const {time,name,details,title,imageUrl,incidentType} = element;
+    
 
     appendIdTo.innerHTML += `
     <div class="card">
@@ -105,18 +106,18 @@ booksRef
               <img src="./assets/Image.svg" alt="Sample photo">
 
               <div class="card-main">
-                <img src="${element.imageUrl}" alt="samples">
+                <img src="${imageUrl}" alt="samples">
               </div>
 
               <div class="card-footer">
                 <div class="circle"></div>
-                <h3>${element.title}</h3>
+                <h3>${title}</h3>
               </div>
             </div>
 
             <div class="text">
               <div class="texting">
-                <p>${element.incidentType}</p>
+                <p>${incidentType}</p>
                 <div class="popping" onclick="myFunction()">
                   <i class="fa fa-ellipsis-v"></i>
                   <span class="delete" id="pop">
@@ -125,16 +126,19 @@ booksRef
                 </div>
               </div>
 
-              <h3>${element.name}</h3>
-              <p>${element.details}
+              <h3>${name}</h3>
+              <p>${details}
               </p>
-              <span>${element.time}</span>
+              <span>${time}</span>
               <span>20TH JUN, 2020</span>
             </div>
           </div>
+          
     `;
 
     });
+
+  
 
   });
 }
@@ -166,10 +170,10 @@ booksRef
       appendToTable.innerHTML += 
 
       `<tr>
-                <td>${element.name}</td>
-                <td>${element.email}</td>
-            
-              </tr>
+          <td>${element.name}</td>
+          <td>${element.email}</td>
+      
+        </tr>
       
       `;
     });
