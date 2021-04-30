@@ -93,17 +93,19 @@ booksRef
       id: doc.id,
       ...doc.data(),
     }));
-    console.log("All data in 'crisis' collection", data); 
-    // [ { id: 'glMeZvPpTN1Ah31sKcnj', title: 'The Great Gatsby' } ]
+    // console.log("All data in 'crisis' collection", data);
+    console.log('this is the data', data) 
+
 
     data.forEach(element => {
-      const {time,name,details,title,imageUrl,incidentType} = element;
-    
+      const {time,name,details,title,imageUrl,incidentType,mediaType} = element;
 
-    appendIdTo.innerHTML += `
-    <div class="card">
+
+      if(mediaType === "MediaType.IMAGE"){
+        appendIdTo.innerHTML += `
+          <div class="card">
             <div class="card-image">
-              <img src="./assets/Image.svg" alt="Sample photo">
+            <img src="./assets/Image.svg" alt="Sample photo">
 
               <div class="card-main">
                 <img src="${imageUrl}" alt="samples">
@@ -127,18 +129,98 @@ booksRef
               </div>
 
               <h3>${name}</h3>
-              <p>${details}
-              </p>
+              <p>${details}</p>
               <span>${time}</span>
               <span>20TH JUN, 2020</span>
             </div>
           </div>
           
+        `;
+      }
+
+      if(mediaType === "MediaType.AUDIO"){
+        appendIdTo.innerHTML += `
+      <div class="card">
+        <div class="card-image">
+        <img src="./assets/Image.svg" alt="Sample photo">
+
+        <div class="card-main">
+          <audio controls>
+            <source src="${imageUrl}" type="audio/ogg">
+            <source src="${imageUrl}" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="card-footer">
+          <div class="circle"></div>
+            <h3>${title}</h3>
+          </div>
+        </div>
+
+        <div class="text">
+          <div class="texting">
+            <p>${incidentType}</p>
+            <div class="popping" onclick="myFunction()">
+              <i class="fa fa-ellipsis-v"></i>
+              <span class="delete" id="pop">
+                delete
+              </span>
+            </div>
+          </div>
+
+          <h3>${name}</h3>
+          <p>${details}
+          </p>
+          <span>${time}</span>
+          <span>20TH JUN, 2020</span>
+        </div>
+      </div>
+          
     `;
+      }
+
+      if(mediaType === "MediaType.VIDEO"){
+        appendIdTo.innerHTML += `
+      <div class="card">
+        <div class="card-image">
+        <img src="./assets/Image.svg" alt="Sample photo">
+
+        <div class="card-main">
+          <video width="320" height="240" controls>
+            <source src="${imageUrl}" type="video/mp4">
+            <source src="${imageUrl}" type="video/ogg">
+          </video>
+        </div>
+
+        <div class="card-footer">
+          <div class="circle"></div>
+            <h3>${title}</h3>
+          </div>
+        </div>
+
+        <div class="text">
+          <div class="texting">
+            <p>${incidentType}</p>
+            <div class="popping" onclick="myFunction()">
+              <i class="fa fa-ellipsis-v"></i>
+              <span class="delete" id="pop">
+                delete
+              </span>
+            </div>
+          </div>
+
+          <h3>${name}</h3>
+          <p>${details}
+          </p>
+          <span>${time}</span>
+          <span>20TH JUN, 2020</span>
+        </div>
+      </div>
+          
+    `;
+      }
 
     });
-
-  
 
   });
 }
@@ -152,6 +234,8 @@ booksRef
 //     }));
 //     console.log("All data in 'books' collection", data);
 //   });
+
+
 function fetchCurrentUserData(){
   const booksRef = firebase
   .firestore()
@@ -184,26 +268,27 @@ booksRef
 function loginState(){
   var user = firebase.auth().currentUser;
 
-if (user) {
-  // User is signed in.
-  window.location = "dashboard.html";
-} else {
-  // No user is signed in.
-}
-}
-
-function loginState(){
-  var user = firebase.auth().currentUser;
-
-if (user) {
-  // User is signed in.
-  // window.location = "dashboard.html";
-} else {
-  // No user is signed in.
-  // window.location = "index.html";
+  if (user) {
+    // User is signed in.
+    window.location = "dashboard.html";
+  } else {
+    // No user is signed in.
+  }
 
 }
-}
+
+// function loginState(){
+//   var user = firebase.auth().currentUser;
+
+// if (user) {
+//   // User is signed in.
+//   // window.location = "dashboard.html";
+// } else {
+//   // No user is signed in.
+//   // window.location = "index.html";
+
+// }
+// }
 
 var logoutBtn = document.getElementById("logout-btn");
 logoutBtn.addEventListener('click', e => {
